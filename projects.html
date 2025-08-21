@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- This is the header for my page -->
+     <header>
+        <h1 style="color:rgb(0, 0, 255)">Project Showcase</h1>
+     </header>
+    <!-- Navigation menu section -->
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="teaching.html">Teaching Practice</a></li>
+            <li><a href="projects.html">Project Showcase</a></li>
+            <li><a href="worksamples.html">Samples of Work</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+     </nav> 
+     <!--This is the main content area for my page-->
+     <main>
+        <section>
+            <h2>University Projects</h2>
+            <p>These are a collection of projects I have completed over the last 3 years</p>
+        </section>
+        <!--This section showcases projects I've completed in flexbot format-->
+        <section>
+            <style>                
+                .flexcontainer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                }
+                .project-card {
+                    flex: 1 1 150px;
+                    background-color: #f9f9f9;
+                    border: 1px solid #ddd;
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .project-card img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 4px;
+                }
+
+                .project-card h3 {
+                    margin-top: 10px;
+                    font-size: 1.1rem;
+                    color: #2c3e50
+                }
+            </style>
+            <div class="flex-container">
+                <div class="project card">
+                    <img src="Images/textilespjs.jpeg" alt="photo of project" width="350px">
+                    <h3>Matching pyjama set</h3>
+                    <p>This textiles project involved producing a screen printed design onto a tshirt. A printed cotton poplin fabric was chosen to sew a pair of pyjama pants. The same fabric was used to make a matching bag that could be used to place the pyjamas in. The set was a mermaid theme with a mermaid scale printed fabric and a mermaid tail was screen printed onto the tshirt.</p>
+                </div>
+
+                <div class="project card">
+                    <img src="images/textilesbanner.JPG" alt="photo of project"width="350px">
+                    <h3>Banner</h3>
+                    <p>This textiles banner utilised various felting and hand stitching techniques. I continued on from the mermaid pyjamas theme and created an under the sea themed banner.3 LED ligts were incorporated throughout the banner (they are not turned on in this image). 1 of the lights is placed in the middle of the sea shell to represent the pearl. The other 2 lights are placed in the mermaid tail to represent the reflection of the sunlight on the scales. </p>
+                </div>
+
+
+        </section>
+     </main>
+</body>
+</html>
