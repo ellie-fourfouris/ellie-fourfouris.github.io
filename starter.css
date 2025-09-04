@@ -28,7 +28,7 @@ img {
   --brand: #1c4c96;        /* primary colour */
   --brand-2: #f39c12;      /* accent colour */
   --bg: #ffffff;           /* page background */
-  --head: #0FDE4B;         /* main header colour */
+  --head: #ffffff;         /* main header colour */
   --text: #222222;         /* default text */
   --muted: #666666;        /* secondary text */
   --surface: #f6f8fb;      /* card/section bg */
@@ -103,7 +103,7 @@ header h1 {
   color: var(--head);                                 /* Special header colour */
 }
 nav {
-  background: #333;             /* Dark grey background for nav bar */
+  background: #3e7fd0;             /* Dark grey background for nav bar */
   font-size: 0.95rem;             /* Slightly smaller font in navigation */
   width: 100%;                    /* Spans full width */
   margin: 32px auto;              /* Space above page content; no top gap */
@@ -125,7 +125,7 @@ nav ul {
 }
 nav a {
   display: block;         /* Larger click target */
-  color: white;         /* White link text */
+  color: rgb(255, 255, 255);         /* White link text */
   text-decoration: none;  /* Remove underline/other decorations from text/links */
   padding: 14px 16px;      /* Space inside link area */
   border-radius: 8px;     /* Slightly rounded corners */
@@ -138,7 +138,7 @@ nav a:focus-visible {
   outline-offset: 2px;                    /* outline offset for increased accessibility/ keyboard-focus styling */
 }
 .active {
-  background-color: grey;     /* Indicates active page link */
+  background-color: rgb(115, 161, 218);     /* Indicates active page link */
 }
 @media (max-width: 640px) {               /* responsiveness for viewing on mobile */
   nav .container { flex-wrap: wrap; }
@@ -190,19 +190,19 @@ table {
   font-family: Arial, sans-serif;     /* Table font */
 }
 th, td {
-  border: 1px solid #ccc;   /* Light grey cell borders */
+  border: 1px solid #000000;   /* Light grey cell borders */
   padding: 10px 12px;         /* Space inside cells */
   text-align: left;           /* Aligns text to the left */
 }
 thead {
-  background-color: #f0f0f0; /* Light grey header background */
+  background-color: #c3c4c4; /* Light grey header background */
 }
 th {
   color: #333;              /* Dark grey header text */
   font-weight: bold;          /* Bold header text */
 }
 tr:nth-child(even) {
-  background-color: #fafafa;  /* Zebra stripe effect for even rows */
+  background-color: #e6e4e4;  /* Zebra stripe effect for even rows */
 }
 .flex-container {
   display: flex;                    /* Horizontal flex layout */
@@ -213,8 +213,8 @@ tr:nth-child(even) {
 }
 .project-card {
   flex: 1 1 350px;                /* Responsive card width */
-  background-color: #f9f9f9;    /* Light grey background */
-  border: 1px solid #ddd;       /* Light border */
+  background-color: #efefef;    /* Light grey background */
+  border: 1px solid #ffffff;       /* Light border */
   padding: 15px;                  /* Space inside card */
   border-radius: 8px;             /* Rounded corners */
   box-shadow: 1px 2px 4px rgba(0,0,0,0.1);      /* Soft shadow */
@@ -227,7 +227,7 @@ tr:nth-child(even) {
 .project-card h3 {
   margin-top: 10px;     /* Space above heading */
   font-size: 1.1rem;    /* Slightly larger heading text */
-  color: #2c3e50;     /* Dark grey-blue colour */
+  color: #374c85;     /* Dark grey-blue colour */
 }
 
 /* ---------- 8) Cards / Gallery ------------- */
@@ -237,7 +237,7 @@ tr:nth-child(even) {
   gap: var(--spacing);                                            /* Space between grid items */
 }
 .card {
-  background: #fff;             /* White background */
+  background: #dbfffe;             /* White background */
   border-radius: var(--radius);   /* Rounded corners */
   box-shadow: var(--shadow);      /* Soft shadow */
   overflow: hidden;               /* Hides overflowing content */

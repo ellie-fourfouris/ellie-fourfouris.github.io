@@ -1,0 +1,64 @@
+
+h1 {
+    color: aqua;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: rgb(198, 251, 255);
+}
+    
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-photo {
+    width: 35%;
+    border-radius: 8px;
+}
+
+table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top:10 px;
+                font-family: Arial, sans-serif;
+                }
+
+                th, td {
+                border: 1px solid;
+                padding: 10px 12px;
+                text-align: left;
+                }
+
+                thead {
+                background-color: color#0000ff;
+                }
+
+                th{
+                color: color#0000ff;
+                font-weight: bold;
+                }
+
+                tr:nth-child(even) {
+                background-color: color#0000ff;
+                }
+
+                h2 {
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+                color: color#0000ff;
+                }
