@@ -198,7 +198,7 @@ thead {
   background-color: #c3c4c4; /* Light grey header background */
 }
 th {
-  color: #333;              /* Dark grey header text */
+  color: #ffffff;              /* Dark grey header text */
   font-weight: bold;          /* Bold header text */
 }
 tr:nth-child(even) {
