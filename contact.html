@@ -4,20 +4,35 @@
     <meta charset="utf-8" />
     <title>Contact — Ellie Fourfouris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Template styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/ellie.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Small, page-specific styles for form errors -->
+    <style>
+      .error-message {
+        color: #c0392b;
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+      }
+      .input-error {
+        border-color: #c0392b !important;
+      }
+    </style>
   </head>
 
   <body class="is-preload">
     <div id="wrapper">
 
+      <!-- Header -->
       <header id="header">
         <h1>Contact</h1>
-        <p>Send a message</p>
+        <p>Get in touch</p>
         <p><a href="index.html" class="button small">Home</a></p>
       </header>
 
+      <!-- Navigation -->
       <nav id="nav">
         <ul>
           <li><a href="about.html">About</a></li>
@@ -29,124 +44,173 @@
         </ul>
       </nav>
 
-      <section class="main">
-  <header class="major"><h2>Contact Me</h2></header>
-
-  <form id="contactForm" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" novalidate>
-    <div class="fields">
-      <div class="field half">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-      </div>
-      <div class="field half">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-      </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="6" required></textarea>
-      </div>
-    </div>
-
-    <!-- where messages will show -->
-    <p id="formError" class="error-message" aria-live="polite"></p>
-    <p id="formSuccess" class="success-message" aria-live="polite"></p>
-
-    <ul class="actions">
-      <li><button type="submit" class="button primary">Send Message</button></li>
-      <li><button type="reset" class="button" id="resetBtn">Clear</button></li>
-    </ul>
-
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <!-- change to your real deployed URL if you make a thankyou.html -->
-    <input type="hidden" name="_next" value="https://YOUR_SITE_URL/thankyou.html">
-  </form>
-</section>
-
+      <!-- Main content -->
+      <div id="main">
+        <section class="main">
+          <header class="major">
+            <h2>Get in touch</h2>
+          </header>
 
           <p>
-            Countdown to graduation:
-            <strong data-countdown="2025-12-15">Loading…</strong>
+            If you’d like to get in contact regarding teaching opportunities,
+            professional placements, or collaboration, please complete the form below.
           </p>
+
+          <!-- Contact form (original fields + placeholders) -->
+          <form
+            id="contact-form"
+            action="https://formsubmit.co/cfbbebd1d50475b529ddc15e75050523"
+            method="post"
+            autocomplete="on"
+            novalidate>
+            
+            <fieldset>
+              <legend>Your details</legend>
+
+              <!-- Full name -->
+              <label for="name">Full name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="River Lee"
+                required
+                minlength="6"
+                autocomplete="name" />
+              <p id="name-error" class="error-message" aria-live="polite"></p>
+
+              <!-- Email address -->
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                required
+                autocomplete="email" />
+              <p id="email-error" class="error-message" aria-live="polite"></p>
+
+              <!-- Message -->
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="How can I help?"
+                required
+                minlength="8"></textarea>
+              <p id="message-error" class="error-message" aria-live="polite"></p>
+
+              <!-- Honeypot anti-spam field (hidden from users) -->
+              <input
+                type="text"
+                name="honey"
+                tabindex="-1"
+                aria-hidden="true"
+                style="position:absolute;left:-9999px;" />
+
+              <!-- Buttons -->
+              <ul class="actions">
+                <li><button type="submit" class="button primary">Send</button></li>
+                <li><button type="reset" class="button" id="resetBtn">Clear</button></li>
+              </ul>
+            </fieldset>
+          </form>
+
+          <!-- Optional: simple contact info section -->
+          <section aria-label="Other ways to contact">
+            <h3>Other ways to connect</h3>
+            <p>Email: <a href="mailto:ellie.fourfouris@gmail.com">ellie.fourfouris@gmail.com</a></p>
+            <p>
+              LinkedIn: <a href="https://www.linkedin.com/" rel="noopener">View my profile</a>
+            </p>
+          </section>
         </section>
       </div>
 
+      <!-- Footer -->
       <footer id="footer">
-        <p class="copyright">&copy; 2025 Ellie Fourfouris. Design:
-          <a href="https://html5up.net" rel="noopener" target="_blank">HTML5 UP</a>.
-        </p>
+        <p class="copyright">&copy; 2025 Ellie Fourfouris.</p>
       </footer>
     </div>
 
+    <!-- Form validation script -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('contact-form');
-        const resetBtn = document.querySelector('[data-form-reset]');
+        const resetBtn = document.getElementById('resetBtn');
 
-        function setError(input, message) {
-          const hint = document.getElementById(input.id + '-error');
-          if (hint) hint.textContent = message || '';
-          if (message) input.setAttribute('aria-invalid', 'true');
-          else input.removeAttribute('aria-invalid');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+
+        function clearErrors() {
+          [nameInput, emailInput, messageInput].forEach(el => el.classList.remove('input-error'));
+          [nameError, emailError, messageError].forEach(el => el.textContent = '');
         }
 
-        function validate() {
-          let ok = true;
+        function validateForm() {
+          clearErrors();
+          let valid = true;
 
-          const name = form.name;
-          if (!name.value.trim()) { setError(name, 'This field is required.'); ok = false; }
-          else if (name.value.trim().length < 6) { setError(name, 'Please enter at least 6 characters.'); ok = false; }
-          else setError(name, '');
+          const nameVal = nameInput.value.trim();
+          const emailVal = emailInput.value.trim();
+          const messageVal = messageInput.value.trim();
 
-          const email = form.email;
-          const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!email.value.trim()) { setError(email, 'This field is required.'); ok = false; }
-          else if (!re.test(email.value.trim())) { setError(email, 'Please enter a valid email address.'); ok = false; }
-          else setError(email, '');
+          // Name: required + minimum length
+          if (!nameVal) {
+            nameError.textContent = 'Please enter your name.';
+            nameInput.classList.add('input-error');
+            valid = false;
+          } else if (nameVal.length < 6) {
+            nameError.textContent = 'Please enter at least 6 characters for your name.';
+            nameInput.classList.add('input-error');
+            valid = false;
+          }
 
-          const msg = form.message;
-          if (!msg.value.trim()) { setError(msg, 'This field is required.'); ok = false; }
-          else if (msg.value.trim().length < 8) { setError(msg, 'Please enter at least 8 characters.'); ok = false; }
-          else setError(msg, '');
+          // Email: required + simple pattern
+          const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+          if (!emailVal) {
+            emailError.textContent = 'Please enter your email address.';
+            emailInput.classList.add('input-error');
+            valid = false;
+          } else if (!emailPattern.test(emailVal)) {
+            emailError.textContent = 'Please enter a valid email address.';
+            emailInput.classList.add('input-error');
+            valid = false;
+          }
 
-          return ok;
+          // Message: required + minimum length
+          if (!messageVal) {
+            messageError.textContent = 'Please enter a message.';
+            messageInput.classList.add('input-error');
+            valid = false;
+          } else if (messageVal.length < 8) {
+            messageError.textContent = 'Please write at least 8 characters.';
+            messageInput.classList.add('input-error');
+            valid = false;
+          }
+
+          return valid;
         }
 
-        form.addEventListener('submit', (e) => {
-          if (!validate()) {
-            e.preventDefault();
-            const firstInvalid = form.querySelector('[aria-invalid="true"]');
-            if (firstInvalid) firstInvalid.focus();
+        form.addEventListener('submit', (event) => {
+          if (!validateForm()) {
+            event.preventDefault();
+            const firstErrorField = form.querySelector('.input-error');
+            if (firstErrorField) firstErrorField.focus();
           }
         });
 
         if (resetBtn) {
-          resetBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            form.reset();
-            form.querySelectorAll('.error').forEach(n => n.textContent = '');
-            form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute('aria-invalid'));
+          resetBtn.addEventListener('click', () => {
+            clearErrors();
           });
         }
-
-        document.querySelectorAll('[data-countdown]').forEach(node => {
-          const dateStr = node.getAttribute('data-countdown');
-          const target = new Date(dateStr + 'T00:00:00');
-          const update = () => {
-            const now = new Date();
-            const diff = target - now;
-            if (isNaN(target)) { node.textContent = '—'; return; }
-            if (diff <= 0) { node.textContent = "🎓 It's today!"; return; }
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            node.textContent = days + ' day' + (days === 1 ? '' : 's') + ' to go';
-          };
-          update();
-          setInterval(update, 60000);
-        });
       });
     </script>
-
-    <script src="assets/js/ellie.js" defer></script>
   </body>
 </html>
