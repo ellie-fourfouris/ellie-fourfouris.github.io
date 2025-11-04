@@ -1,46 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellie's Teaching Portfolio - Resume</title>
-    <link rel="stylesheet" href="starter.css">
-</head>
-<body>
-    <!-- This is the header section for my page -->
-    <header>
+  <head>
+    <meta charset="utf-8" />
+    <title>Resume — Ellie Fourfouris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      .resume-preview {
+        display: block;
+        max-width: 100%;
+        width: 650px;
+        margin: 0 auto 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        transition: transform 0.25s ease;
+      }
+      .resume-preview:hover {
+        transform: scale(1.01);
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <header id="header">
         <h1>Resume</h1>
-    </header>
-    <!-- Navigation menu section -->
-    <nav>
-        <div class="container">
+        <p>Qualifications and certifications</p>
+        <p><a href="index.html" class="button small">Home</a></p>
+      </header>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="main">
+        <section class="main">
+          <img src="images/resumethumbnail.png" alt="Preview of resume" class="resume-preview" />
+
+          <p>
+            <a class="button primary icon solid fa-download"
+               href="docs/resume.pdf"
+               target="_blank" rel="noopener">
+              Download Resume (PDF)
+            </a>
+          </p>
+
+          <button type="button"
+                  class="button"
+                  id="toggleDetailsBtn"
+                  aria-expanded="false">
+            Show/Hide details
+          </button>
+
+          <div id="extra-resume" hidden>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="teaching.html">Teaching Practice</a></li>
-                <li><a href="projects.html">Project Showcase</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a class="active" href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
+              <li>WWCC: Valid to 2028</li>
+              <li>First Aid (current)</li>
+              <li>ASCIA Asthma &amp; Anaphylaxis training (current)</li>
+              <li>Safe Food Handling</li>
+              <li>Child Protection</li>
             </ul>
-        </div>
-    </nav>
-    <!-- This is the main content area for my page -->
-    <main>
-        <section class="section">
-            <h2>Download Resume</h2>
-            <p>This document outlines my professional/teaching experience to date:</p>
-            <figure>
-                <a href="docs/resume.pdf" download="docs/resume.pdf" type="application/pdf" aria-label="Download Resume PDF"><img src="images/resume.thumbnail.png" alt="Thumbnail of Resume PDF" width="300" loading="lazy"></a>
-                <figcaption> Download <strong>Resume</strong> (PDF)</figcaption>
-            </figure>
+          </div>
         </section>
-    </main>
-    <!-- This is the footer section for my page, in line with Semantic HTML -->
-    <footer>
-        <div class="container">
-            <p> &copy; 2025 Ellie Fourfouris. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+      </div>
+
+      <footer id="footer">
+        <p class="copyright">&copy; 2025 Ellie Fourfouris. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      </footer>
+    </div>
+
+    <!-- Simple, page-specific toggle script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('toggleDetailsBtn');
+        const target = document.getElementById('extra-resume');
+        if (!btn || !target) return;
+
+        btn.addEventListener('click', function () {
+          const isHidden = target.hasAttribute('hidden');
+          if (isHidden) {
+            target.removeAttribute('hidden');
+          } else {
+            target.setAttribute('hidden', '');
+          }
+          btn.setAttribute('aria-expanded', String(isHidden));
+        });
+      });
+    </script>
+  </body>
 </html>

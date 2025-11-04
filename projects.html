@@ -1,102 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ellie's Teaching Portfolio - Project Showcase</title>
-     <link rel="stylesheet" href="starter.css">
-</head>
-<body>
-    <!-- This is the header for my page -->
-     <header>
-        <h1 style="color:rgb(255, 255, 255)">Project Showcase</h1>
-     </header>
-    <!-- Navigation menu section -->
-     <nav>
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="teaching.html">Teaching Practice</a></li>
-                <li><a class="active" href="projects.html">Project Showcase</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </div>
-     </nav> 
-     <!--This is the main content area for my page-->
-     <main>
-        <section>
-            <h2>University Projects</h2>
-            <p>These are a collection of projects I have completed over the last 3 years</p>
-        </section>
-        <!--This section showcases projects I've completed in flexbot format-->
-        <section>
-            <style>                
-                .flex-container {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    justify-content: space-between;
-                    margin-top: 20px;
-                }
-                .project-card {
-                    flex: 1 1 150px;
-                    background-color: #f9f9f9;
-                    border: 1px solid #ddd;
-                    padding: 15px;
-                    border-radius: 8px;
-                    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
-                }
+<!DOCTYPE HTML>
+<!--
+  Template: Stellar by HTML5 UP (CC BY 3.0) – https://html5up.net
+  Adapted by Ellie Fourfouris
+-->
+<html>
+  <head>
+    <title>Projects — Ellie Fourfouris</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/ellie.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
 
-                .project-card img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 4px;
-                }
+      <!-- Header -->
+      <header id="header">
+        <h1>Project Showcase</h1>
+        <p>Selected work from Food Tech, Textiles, and Design</p>
+        <p><a href="index.html" class="button small">Home</a></p>
+      </header>
 
-                .project-card h3 {
-                    margin-top: 10px;
-                    font-size: 1.1rem;
-                    color: #2c3e50
-                }
-            </style>
-            <div class="flex-container">
-                <div class="project card">
-                    <img src="Images/textilespjs.jpeg" alt="photo of pyjama project" width="3500px">
-                    <h3>Matching pyjama set</h3>
-                    <p>This textiles project involved producing a screen printed design onto a tshirt. A printed cotton poplin fabric was chosen to sew a pair of pyjama pants. The same fabric was used to make a matching bag that could be used to place the pyjamas in. The set was a mermaid theme with a mermaid scale printed fabric and a mermaid tail was screen printed onto the tshirt.</p>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <section class="main">
+        <header class="major">
+         <h2>Projects</h2>
+        </header>
+
+<style>
+  #main .box img {
+    max-width: 20%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    display: block;
+  }
+</style>
+
+            <!-- Project 1 -->
+            <div class="projects-grid">
+                <div class="box">
+                    <span class="image fit"><img src="images/textilespjs.jpeg" alt="Matching Pyjama Set" loading="lazy" /></span>
+                    <h3>Matching Pyjama Set</h3>
+                    <p>Screen-printed tee and cotton poplin PJ pants with matching bag (mermaid theme). Explores design, pattern drafting, and fabric application techniques.</p>
                 </div>
 
-                <div class="project card">
-                    <img src="images/textilesbanner.jpeg" alt="photo of felt banner project"width="350px">
-                    <h3>Banner</h3>
-                    <p>This textiles banner utilised various felting and hand stitching techniques. I continued on from the mermaid pyjamas theme and created an under the sea themed banner.3 LED ligts were incorporated throughout the banner (they are not turned on in this image). 1 of the lights is placed in the middle of the sea shell to represent the pearl. The other 2 lights are placed in the mermaid tail to represent the reflection of the sunlight on the scales. </p>
-                </div>
-                 <div class="project card">
-                    <img src="images/lamp.jpeg" alt="photo of laser cut lamp"width="350px">
-                    <h3>Lamp</h3>
-                    <p>This lamp features laser cut plywood with a tree design cut out. When the lamp is turned on, the light projects the design onto the wall. </p>
-                </div>
-                 <div class="project card">
-                    <img src="images/burritobowl.png" alt="photo of burrito bowl"width="350px">
-                    <h3>Burrito Bowl</h3>
-                    <p>This was a food styling and photography task. Various tools were used to prepare the ingredients and create colour contrast. The lighting was set up to enhance the vibrant colours of each ingredient. </p>
-                </div>
-                 <div class="project card">
-                    <img src="images/biscoff_scrolls_packaging.jpeg" alt="photo of biscoff scrolls in packaging"width="350px">
-                    <h3>Biscoff Scrolls</h3>
-                    <p>This task involved redesigning an existing product that required improvement. I redesigned biscoff hot cross buns</p>
-                </div>
+            <!-- Project 2 -->
+            <div class="box">
+              <span class="image fit"><img src="images/lamp.jpeg" alt="Laser-cut Lamp" loading="lazy" /></span>
+              <h3>Laser-cut Lamp</h3>
+              <p>Plywood lamp projecting a tree motif onto the wall. Designed using CAD and tested for safe light diffusion and structural stability.</p>
             </div>
+
+            <!-- Project 3 -->
+            <div class="box">
+              <span class="image fit"><img src="images/biscoff_scrolls_packaging.jpeg" alt="Biscoff Scrolls Redesign" loading="lazy" /></span>
+              <h3>Biscoff Scrolls Redesign</h3>
+              <p>Food product redesign with improved sensory appeal and packaging concept. Includes nutrition panel and sustainability-focused labelling.</p>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="box">
+              <span class="image fit"><img src="images/textilesbanner.jpeg" alt="Textiles Banner" loading="lazy" /></span>
+              <h3>Textiles Banner</h3>
+              <p>Appliqué and layered textile banner demonstrating sewing precision, color harmony, and creative symbolism linked to classroom learning themes.</p>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="box">
+              <span class="image fit"><img src="images/burritobowl.png" alt="Burrito Bowl" loading="lazy" /></span>
+              <h3>Burrito Bowl</h3>
+              <p>Stage 5 Food Technology practical task focusing on balance, presentation, and nutrition. Demonstrates plating, portion control, and cultural food awareness.</p>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="box">
+              <span class="image fit"><img src="images/petitequilt.jpeg" alt="Petite Quilt" loading="lazy" /></span>
+              <h3>Petite Quilt</h3>
+              <p>Different shibori and dyeing techniques were used to colour the fabric. Screen prints were developed and printed using various colours, foil and puff to create contrast and texture..</p>
+            </div>
+
         </section>
-     </main>
-     <!-- This is the footer section for my page, in line with Semantic HTML -->
-    <footer>
-        <div class="container">
-            <p> &copy; 2025 Ellie Fourfouris. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">&copy; 2025 Ellie Fourfouris. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+      </footer>
+    </div>
+
+    <script src="assets/js/ellie.js" defer></script>
+  </body>
 </html>
