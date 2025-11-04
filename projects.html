@@ -1,24 +1,110 @@
 <!DOCTYPE HTML>
 <!--
-  Template: Stellar by HTML5 UP (CC BY 3.0) – https://html5up.net
-  Adapted by Ellie Fourfouris
+  Template: Stellar by HTML5 UP (CC BY 3.0)
+  Adapted by Ellie Fourfouris – Projects page
 -->
-<html>
+<html lang="en">
   <head>
-    <title>Projects — Ellie Fourfouris</title>
     <meta charset="utf-8" />
+    <title>Projects — Ellie Fourfouris</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Template styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/ellie.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+      /* === Project grid layout === */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, repeat(3, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .project-card {
+        background: #ffffff;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .project-card-body {
+        padding: 1.5rem;
+      }
+
+      .project-card-body h3 {
+        margin: 0 0 0.5rem 0;
+      }
+
+      .project-card-body p {
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .project-thumb {
+        cursor: pointer;
+        transition: transform 0.25s ease;
+      }
+
+      .project-thumb:hover {
+        transform: scale(1.03);
+      }
+
+      /* === Lightbox for enlarged images === */
+      .project-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.85);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem;
+        cursor: zoom-out;
+      }
+
+      .project-lightbox.is-visible {
+        display: flex;
+      }
+
+      .project-lightbox img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 1rem;
+        box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+      }
+
+      .project-lightbox-caption {
+        color: #f5f5f5;
+        max-width: 60rem;
+        text-align: center;
+        line-height: 1.5;
+      }
+    </style>
   </head>
+
   <body class="is-preload">
     <div id="wrapper">
 
       <!-- Header -->
       <header id="header">
-        <h1>Project Showcase</h1>
-        <p>Selected work from Food Tech, Textiles, and Design</p>
+        <h1>Projects</h1>
+        <p>Textiles and Food Technology projects</p>
         <p><a href="index.html" class="button small">Home</a></p>
       </header>
 
@@ -35,74 +121,184 @@
       </nav>
 
       <!-- Main -->
-      <section class="main">
-        <header class="major">
-         <h2>Projects</h2>
-        </header>
+      <div id="main">
+        <section class="main">
+          <header class="major">
+            <h2>Project Showcase</h2>
+          </header>
 
-<style>
-  #main .box img {
-    max-width: 20%;
-    height: auto;
-    margin: 0 auto 1rem auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
-    display: block;
-  }
-</style>
+          <p>
+            This page highlights a selection of my Textiles and Food Technology projects. Each project demonstrates
+            planning, creativity and practical skills that I aim to foster in my future students. Click on any image
+            to view a larger version.
+          </p>
 
-            <!-- Project 1 -->
-            <div class="projects-grid">
-                <div class="box">
-                    <span class="image fit"><img src="images/textilespjs.jpeg" alt="Matching Pyjama Set" loading="lazy" /></span>
-                    <h3>Matching Pyjama Set</h3>
-                    <p>Screen-printed tee and cotton poplin PJ pants with matching bag (mermaid theme). Explores design, pattern drafting, and fabric application techniques.</p>
-                </div>
+          <div class="projects-grid">
 
-            <!-- Project 2 -->
-            <div class="box">
-              <span class="image fit"><img src="images/lamp.jpeg" alt="Laser-cut Lamp" loading="lazy" /></span>
-              <h3>Laser-cut Lamp</h3>
-              <p>Plywood lamp projecting a tree motif onto the wall. Designed using CAD and tested for safe light diffusion and structural stability.</p>
-            </div>
+            <!-- Textiles: Matching pyjama set -->
+            <article class="project-card">
+              <img
+                src="images/textilespjs.jpeg"
+                alt="Matching pyjama set made in textiles"
+                class="project-thumb"
+                data-project-full="images/textilespjs.jpeg"
+                data-project-caption="Matching pyjama set – Textiles project focusing on comfort, fit and construction skills, including elasticated waistband, hems and decorative details."
+              />
+              <div class="project-card-body">
+                <h3>Textiles – Matching Pyjama Set</h3>
+                <p>
+                  A textiles project involving the design and construction of a matching pyjama set. The project
+                  focused on pattern use, fabric choice, comfort and accurate sewing techniques.
+                </p>
+              </div>
+            </article>
 
-            <!-- Project 3 -->
-            <div class="box">
-              <span class="image fit"><img src="images/biscoff_scrolls_packaging.jpeg" alt="Biscoff Scrolls Redesign" loading="lazy" /></span>
-              <h3>Biscoff Scrolls Redesign</h3>
-              <p>Food product redesign with improved sensory appeal and packaging concept. Includes nutrition panel and sustainability-focused labelling.</p>
-            </div>
+            <!-- Food: Burrito bowl -->
+            <article class="project-card">
+              <img
+                src="images/burritobowl.png"
+                alt="Burrito bowl food product"
+                class="project-thumb"
+                data-project-full="images/burritobowl.png"
+                data-project-caption="Burrito bowl – Food Technology task exploring menu planning, sensory properties and presentation skills."
+              />
+              <div class="project-card-body">
+                <h3>Food Technology – Burrito Bowl</h3>
+                <p>
+                  A practical food product developed as part of a Food Technology unit. The burrito bowl task focused
+                  on nutrition, flavour balance, presentation and timing in the kitchen.
+                </p>
+              </div>
+            </article>
 
-            <!-- Project 4 -->
-            <div class="box">
-              <span class="image fit"><img src="images/textilesbanner.jpeg" alt="Textiles Banner" loading="lazy" /></span>
-              <h3>Textiles Banner</h3>
-              <p>Appliqué and layered textile banner demonstrating sewing precision, color harmony, and creative symbolism linked to classroom learning themes.</p>
-            </div>
 
-            <!-- Project 5 -->
-            <div class="box">
-              <span class="image fit"><img src="images/burritobowl.png" alt="Burrito Bowl" loading="lazy" /></span>
-              <h3>Burrito Bowl</h3>
-              <p>Stage 5 Food Technology practical task focusing on balance, presentation, and nutrition. Demonstrates plating, portion control, and cultural food awareness.</p>
-            </div>
+             <!-- Textiles: Petite Quilt -->
+            <article class="project-card">
+              <img
+                src="images/petitequilt.jpeg"
+                alt="Petite Quilt Project"
+                class="project-thumb"
+                data-project-full="images/petitequilt.jpeg"
+                data-project-caption="Petite Quilt – Product redevelopment task where an existing baked product was redesigned to improve quality, appearance and packaging."
+              />
+              <div class="project-card-body">
+                <h3>Textiles– Petite Quilt</h3>
+                <p>
+                  Different shibori and dyeing techniques were used to colour the fabric. Various inks were used to print the original screen prints using different colours, foil and puff to add colour and texture.
+                </p>
+              </div>
+            </article>
 
-            <!-- Project 6 -->
-            <div class="box">
-              <span class="image fit"><img src="images/petitequilt.jpeg" alt="Petite Quilt" loading="lazy" /></span>
-              <h3>Petite Quilt</h3>
-              <p>Different shibori and dyeing techniques were used to colour the fabric. Screen prints were developed and printed using various colours, foil and puff to create contrast and texture..</p>
-            </div>
+            <!-- Industrial: Laser-cut lamp -->
+            <article class="project-card">
+              <img
+                src="images/lamp.jpeg"
+                alt="Laser cut plywood lamp project"
+                class="project-thumb"
+                data-project-full="images/lamp.jpeg"
+                data-project-caption="Laser-cut lamp – Plywood lamp featuring a repeat pattern cut with a laser cutter. When lit, the pattern is projected onto surrounding surfaces."
+              />
+              <div class="project-card-body">
+                <h3>Industrial: Timber – Laser-cut Lamp</h3>
+                <p>
+                  A lamp designed and produced using laser-cut plywood. The cut pattern creates interesting shadows
+                  when the lamp is switched on, linking design decisions with function and atmosphere.
+                </p>
+              </div>
+            </article>
 
+        <!-- Textiles: Felt banner -->
+            <article class="project-card">
+              <img
+                src="images/textilesbanner.jpeg"
+                alt="Colourful felt banner project"
+                class="project-thumb"
+                data-project-full="images/textilesbanner.jpeg"
+                data-project-caption="Felt banner – Layered felt shapes, applique and stitching techniques used to create a decorative banner with a cohesive colour scheme."
+              />
+              <div class="project-card-body">
+                <h3>Textiles – Felt Banner</h3>
+                <p>
+                  A decorative banner created using layered felt, applique and hand-stitching. The design combines
+                  colour, pattern and texture to communicate a theme visually.
+                </p>
+              </div>
+            </article>
+
+            <!-- Food: Biscoff scrolls -->
+            <article class="project-card">
+              <img
+                src="images/biscoff_scrolls_packaging.jpeg"
+                alt="Packaged Biscoff scrolls project"
+                class="project-thumb"
+                data-project-full="images/biscoff_scrolls_packaging.jpeg"
+                data-project-caption="Biscoff scrolls – Product redevelopment task where an existing baked product was redesigned to improve quality, appearance and packaging."
+              />
+              <div class="project-card-body">
+                <h3>Food Technology – Biscoff Scrolls</h3>
+                <p>
+                  A product redevelopment project where an existing baked item was redesigned. The focus was on
+                  improving sensory qualities, consistency and packaging to better meet the needs of the target market.
+                </p>
+              </div>
+            </article>
+
+          </div>
         </section>
+      </div>
+
+      <!-- Lightbox overlay -->
+      <div
+        id="project-lightbox"
+        class="project-lightbox"
+        role="dialog"
+        aria-label="Expanded project image"
+      >
+        <img id="project-lightbox-img" src="" alt="Enlarged project image" />
+        <p id="project-lightbox-caption" class="project-lightbox-caption"></p>
       </div>
 
       <!-- Footer -->
       <footer id="footer">
-        <p class="copyright">&copy; 2025 Ellie Fourfouris. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        <p class="copyright">&copy; 2025 Ellie Fourfouris.</p>
       </footer>
     </div>
 
-    <script src="assets/js/ellie.js" defer></script>
+    <!-- Lightbox script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const lightbox = document.getElementById('project-lightbox');
+        const lightboxImg = document.getElementById('project-lightbox-img');
+        const lightboxCaption = document.getElementById('project-lightbox-caption');
+
+        // Open lightbox when a project image is clicked
+        document.querySelectorAll('.project-thumb').forEach(function (img) {
+          img.addEventListener('click', function () {
+            const fullSrc = img.getAttribute('data-project-full') || img.src;
+            const caption = img.getAttribute('data-project-caption') || '';
+
+            lightboxImg.src = fullSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.add('is-visible');
+          });
+        });
+
+        // Close lightbox when clicked anywhere
+        lightbox.addEventListener('click', function () {
+          lightbox.classList.remove('is-visible');
+          lightboxImg.src = '';
+          lightboxCaption.textContent = '';
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && lightbox.classList.contains('is-visible')) {
+            lightbox.classList.remove('is-visible');
+            lightboxImg.src = '';
+            lightboxCaption.textContent = '';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
